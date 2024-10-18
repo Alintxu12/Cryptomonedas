@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modificar precio criptomoneda</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+    <script src="../js/scriptform1.js"></script>
+    <script>
+        function confirmModify() {
+            // Show a confirmation message before deleting
+            var answer = confirm("¿Estás seguro de que quieres modificar esta criptomoneda?");
+            if (answer) {
+                // User clicked OK
+                return true;
+            } else {
+                // User clicked Cancel
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="topnav">
+    <a class="active" href="index.html">PRINCIPAL</a>
+    <div class="dropdown">
+        <a href="../php/mostrar.php">PRECIOS</a>
+    </div>
+    <div class="dropdown">
+        <a href="../php/mostrarUsuarios.php">USUARIOS</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">CRIPTOMONEDAS</button>
+        <div class="dropdown-content">
+            <a href="form_new_crypto.html">Añade una nueva criptomoneda</a>
+            <a href="form_modify_crypto.html">Modifica una criptomoneda</a>
+            <a href="form_delete_crypto.html">Borra una criptomoneda</a>
+
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="info.html">Preguntas</a>
+    </div>
+
+</div>
+<!-- Title -->
+<h2>Modificar precios</h2>
+<p>Selecciona la criptomoneda que quieras modificar</p>
+
+<!-- This is a drop-down list to choose the set you want to change the price -->
+<form action="../php/modificar.php" method="GET" type="submit" >
+    <select name="nombre">
+        <option value="Bitcoin">Bitcoin</option>
+        <option value="WorldCoin">WorldCoin</option>
+        <option value="IlloJuan">IlloJuan</option>
+        <option value="LiteCoin">LiteCoin</option>
+
+    </select>
+    <hr>
+
+    <input type="number" step="any" style="width: 60px" name="precio" placeholder="€" min="0" required>
+    <input type="submit"  value="Cambiar precio">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Criptomonedas</title>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+	</head>
+
+	<body>
+	<a id="top"></a>
+<!-----------------------------------Navigation bar------------------------------------------>
+		<div class="topnav">
+			<a class="active" href="index.html">PRINCIPAL</a>
+			<div class="dropdown">
+				<a href="../php/mostrar.php">PRECIOS</a>
+				
+			</div>
+			<div class="dropdown">
+				<a href="../php/mostrarUsuarios.php">USUARIOS</a>
+			</div>
+			<div class="dropdown">
+			    <button class="dropbtn">CRIPTOMONEDAS</button>
+				<div class="dropdown-content">
+					<a href="form_new_crypto.html">Añade una nueva criptomoneda</a>
+					<a href="form_modify_crypto.html">Modifica una criptomoneda</a>
+					<a href="form_delete_crypto.html">Borra una criptomoneda</a>
+					
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="info.html">Preguntas</a>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------------->
+               
+		<h1>CRIPTOMONEDAS</h1>
+		
+		<p> Bienvenido a la página sobre criptomonedas más completa</p>
+		
+		<h2>Descubre el Mundo de las Criptomonedas: Una Revolución Digital Financiera</h2>
+
+		<p>
+			Las criptomonedas han transformado radicalmente la forma en que entendemos y operamos con el dinero. En su esencia, son activos digitales descentralizados que utilizan criptografía para garantizar transacciones seguras y transparentes. Desde la introducción de Bitcoin en 2009, la tecnología blockchain subyacente ha dado lugar a una proliferación de nuevas criptomonedas y aplicaciones financieras innovadoras.
+		</p>
+		<p>
+			¿Qué hace que las criptomonedas sean tan emocionantes? Ofrecen una alternativa al sistema financiero tradicional, eliminando intermediarios y proporcionando una mayor autonomía y control sobre los activos. Además, su alcance es global, lo que significa que las transacciones pueden realizarse instantáneamente y sin fronteras, lo que resulta especialmente beneficioso en un mundo cada vez más interconectado.
+		</p>
+		
+		<p>
+			En esta página, te invitamos a explorar más a fondo este fascinante ecosistema financiero digital. Desde guías para principiantes hasta análisis de mercado, nuestro objetivo es proporcionarte la información y herramientas necesarias para comprender, invertir y participar de manera segura en el emocionante mundo de las criptomonedas. ¡Bienvenido a la revolución financiera del siglo XXI!
+		</p>
+
+		<br>
+		<br>
+		<br>
+		
+		<h2>CONSIGUE UNA VIDA MEJOR GRACIAS A LAS CRIPTOMONEDAS</h2>
+	
+	
+		<footer>
+		<p id="fot">LMS Reto Final <a href="#top"> Back to top</a></p>
+		</footer>
+		
+
+		<script>
+        const backgrounds = [
+            'url("cryptos.jpeg")',
+            'url("cryptos2.jpg")',
+            'url("cryptos3.png")',
+        ];
+
+        let currentBackground = 0;
+
+        function changeBackground() {
+            currentBackground = (currentBackground + 1) % backgrounds.length;
+            document.body.style.backgroundImage = backgrounds[currentBackground];
+        }
+
+        setInterval(changeBackground, 10000); // Cambia la imagen cada 7 segundos ya que la transicion de CSS tarda 3 segundos
+    </script>
+
+	</body>
+
+
+</html>

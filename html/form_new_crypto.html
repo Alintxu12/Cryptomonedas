@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Crypto Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+    <script src="../js/scriptform1.js" defer></script>
+    <script>
+        function confirmDelete() {
+            // Show a confirmation message before deleting
+            var answer = confirm("¿Estás seguro de que quieres borrar esta criptomoneda?");
+            if (answer) {
+                // User clicked OK
+                return true;
+            } else {
+                // User clicked Cancel
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="../html/index.html">PRINCIPAL</a>
+        <div class="dropdown">
+            <a href="../php/mostrar.php">PRECIOS</a>
+        </div>
+        <div class="dropdown">
+            <a href="../php/mostrarUsuarios.php">USUARIOS</a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">CRIPTOMONEDAS</button>
+            <div class="dropdown-content">
+                <a href="form_new_crypto.html">Añade una nueva criptomoneda</a>
+                <a href="form_modify_crypto.html">Modifica una criptomoneda</a>
+                <a href="form_delete_crypto.html">Borra una criptomoneda</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="info.html">Preguntas</a>
+        </div>
+    </div>
+
+    <form action="../php/insert.php" method="get"  onsubmit="return validateForm() " >
+        <h2>Introduce una nueva criptomoneda</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
+
+        <label for="EUR">Precio:</label>
+        <input type="number" id="EUR" name="EUR" min="0" value="0" required>€
+
+        <input type="submit"  value="Añadir criptomoneda" >
+    </form>
+<script>
+        const backgrounds = [
+            'url("cryptos.jpeg")',
+            'url("cryptos2.jpg")',
+            'url("cryptos3.png")',
+        ];
+
+        let currentBackground = 0;
+
+        function changeBackground() {
+            currentBackground = (currentBackground + 1) % backgrounds.length;
+            document.body.style.backgroundImage = backgrounds[currentBackground];
+        }
+
+        setInterval(changeBackground, 10000); // Cambia la imagen cada 7 segundos ya que la transicion de CSS tarda 3 segundos
+    </script>
+</body>
+</html>

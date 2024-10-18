@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Criptomonedas</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+</head>
+<body>
+<a id="top"></a>
+<!-----------------------------------Navigation bar------------------------------------------>
+<div class="topnav">
+    <a class="active" href="index.html">PRINCIPAL</a>
+    <div class="dropdown">
+        <a href="../php/mostrar.php">PRECIOS</a>
+    </div>
+    <div class="dropdown">
+        <a href="../php/mostrarUsuarios.php">USUARIOS</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">CRIPTOMONEDAS</button>
+        <div class="dropdown-content">
+            <a href="form_new_crypto.html">Añade una nueva criptomoneda</a>
+            <a href="form_modify_crypto.html">Modifica una criptomoneda</a>
+            <a href="form_delete_crypto.html">Borra una criptomoneda</a>
+        </div>
+    </div>
+    <div class="dropdown">
+    </div>
+    <div class="dropdown">
+        <a href="info.html">Preguntas</a>
+    </div>
+</div>
+<!------------------------------------------------------------------------------------------->
+<div class="info-section">
+    <h3>¿Qué son las Criptomonedas?</h3>
+    <p>Las criptomonedas son activos digitales que utilizan criptografía para garantizar su funcionamiento y seguridad. Operan en una tecnología de cadena de bloques, que permite una red descentralizada para transacciones peer-to-peer.</p>
+    
+    <h3>Beneficios de las Criptomonedas</h3>
+    <ul>
+        <li>Decentralización: Menor dependencia de entidades financieras tradicionales.</li>
+        <li>Seguridad: Transacciones protegidas por tecnología avanzada de criptografía.</li>
+        <li>Accesibilidad: Facilidad de acceso a través de internet sin necesidad de intermediarios.</li>
+    </ul>
+    
+    <h3>Como se adquieren las Criptomonedas</h3>
+    <ul>
+        <li>Comprar Criptomonedas</li>
+        <li>Intercambiar Criptomonedas</li>
+        <li>Minar Criptomonedas</li>
+    </ul>
+
+    <h3>Metodos de Pago</h3>
+    <div class="info-content">
+        <ul>
+            <li>El método de pago en general es sencillo, pero lo difícil es que las tiendas acepten el método ya que suelen ser escépticas.</li>
+            <li>De todos modos, aquí te ponemos los pasos para ellos:</li>
+            <li>1. Tener Criptomonedas</li>
+            <li>2. Descargar una Wallet de Criptomonedas</li>
+            <li>3.1. Pagar con el Wallet si la tienda lo acepta</li>
+	    <li>3.2.1. Buscar un cajero de Criptomonedas si la tienda no acepta el método de pago. Vea la imagen abajo.</li>	    
+	    <li>3.2.2. Sacar el dinero desde el cajero</li>
+        </ul>
+        <img src="maquinas.png" alt="Fotos de cajeros de criptomonedas" class="info-image">
+    </div>
+</div>
+
+<footer>
+    <p id="fot">LMS Reto Final <a href="#top"> Back to top</a></p>
+</footer>
+
+<script>
+    const backgrounds = [
+        'url("cryptos.jpeg")',
+        'url("cryptos2.jpg")',
+        'url("cryptos3.png")',
+    ];
+
+    let currentBackground = 0;
+
+    function changeBackground() {
+        currentBackground = (currentBackground + 1) % backgrounds.length;
+        document.body.style.backgroundImage = backgrounds[currentBackground];
+    }
+
+    setInterval(changeBackground, 10000); // Cambia la imagen cada 10 segundos
+</script>
+</body>
+</html>

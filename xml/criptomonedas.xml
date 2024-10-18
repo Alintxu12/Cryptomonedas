@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xpath/xslt/listCryptos.xsl"?>
+<database>
+<Criptomonedas>
+  <Criptomoneda id="01">
+    <Nombre>Bitcoin</Nombre>
+    <Precio>50000</Precio>
+    <imagen>bitcoin.png</imagen>
+    <nombre_comprador>Jone Amezaga</nombre_comprador>
+    <privado/>
+  </Criptomoneda>
+  <Criptomoneda id="02">
+    <Nombre>WorldCoin</Nombre>
+    <Precio>5</Precio>
+    <imagen>bitcoin.png</imagen>
+    <consorcio/>
+  </Criptomoneda>
+  <Criptomoneda id="03">
+    <Nombre>IlloJuan</Nombre>
+    <Precio>33</Precio>
+    <imagen>bitcoin.png</imagen>
+    <nombre_comprador>Sara Ortega</nombre_comprador>
+    <publico/>
+  </Criptomoneda>
+  <Criptomoneda id="04">
+    <nombre>LiteCoin</nombre>
+    <Precio>69</Precio>
+    <imagen>bitcoin.png</imagen>
+    <privado/>
+  </Criptomoneda>
+  <!-- Añadir más-->
+</Criptomonedas>
+
+<Usuarios>
+  <Usuario>
+    <Nombre>Jone Amezaga</Nombre>
+    <Contraseña>Jone2005</Contraseña>
+    <crypto_comprada>01</crypto_comprada>
+  </Usuario>
+  <Usuario>
+    <Nombre>Sara Ortega</Nombre>
+    <Contraseña>Sara2005</Contraseña>
+    <crypto_comprada>03</crypto_comprada>
+  </Usuario>
+  <!-- Añadir más-->
+</Usuarios>
+</database>
